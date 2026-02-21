@@ -27,7 +27,7 @@ st.write("Ask any question related to C++ Introduction")
 @st.cache_resource
 def load_vectorstore():
 
-    file_path = r"D:\genai1\C++_Introduction.txt"
+    file_path = "C++_Introduction.txt"
 
     # Try using TextLoader (with utf-8). If it fails (encoding issues),
     # fall back to reading the file bytes and decoding with multiple encodings.
@@ -68,4 +68,5 @@ if query:
     st.subheader("Relevant Information:")
     for i,doc in enumerate(docs):
         st.markdown(f"**Document {i+1}:**")
+
         st.write(doc.page_content)
